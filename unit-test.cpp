@@ -8,6 +8,7 @@
 using std::cout;
 using std::endl;
 using std::stringstream;
+
 // A Function to test if two doubles are "equal"
 bool DoubleEquals(double a, double b, double epsilon = 1e-6);
 
