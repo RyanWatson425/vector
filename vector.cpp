@@ -1,6 +1,9 @@
-//
-// Created by Arias Arevalo, Carlos on 4/6/20.
-//
+/*
+ * Title: Vector Code
+ * Purpose: To add new functionality to the vector code Dr. Arias has provided us with
+ * Author: Ryan Watson
+ * Date: 4/6/21
+ */
 
 #include "vector.h"
 
