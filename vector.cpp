@@ -141,6 +141,32 @@ Vector Vector::operator-(const Vector &rhs) const {
     return retVal;
 }
 
+/* Adds the negative operator
+ * creates a new vector equivalent to _data
+ * multiplies all the values of the new vector by -1
+ * returns the new vector
+ */
+Vector Vector::operator-() const {
+    Vector negativeVal(_size);
+    for (size_t i = 0; i < _size; i++) {
+        negativeVal._data[i] = this->_data[i] * -1;
+    }
+    return negativeVal;
+}
+
+/* Adds the multiplication operator
+ * creates a new vector equivalent to _data
+ * multiplies all the values of the new vector by the parameter val
+ * returns the new vector
+ */
+Vector Vector::operator*(double val) const {
+    Vector multipliedVal(_size);
+    for (size_t i = 0; i < _size; i++) {
+        multipliedVal._data[i] = this->_data[i] * val;
+    }
+    return multipliedVal;
+}
+
 bool Vector::IsValid() const {
     return _size != 0;
 }

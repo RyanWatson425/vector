@@ -130,6 +130,20 @@ int main(int argc, char* argv[]) {
 //    assert(i[1] == 0.9);
 //    assert(i[2] == -4.0);
 
+    //tests new negative operator
+    i = -i;
+    assert(i.IsValid());
+    assert(DoubleEquals(i[0], -3.0));
+    assert(DoubleEquals(i[1], -0.9));
+    assert(DoubleEquals(i[2], 4.0));
+
+    //tests overloaded multiplication operator
+    i = i * 5;
+    assert(i.IsValid());
+    assert(DoubleEquals(i[0], -15.0));
+    assert(DoubleEquals(i[1], -4.5));
+    assert(DoubleEquals(i[2], 20.0));
+    
     DoubleEquals(g.EuclidianDistance(h), sqrt(25.81));
     DoubleEquals(g.EuclidianDistance(g), 0);
 //    assert(g.EuclidianDistance(h) == sqrt(25.81));
